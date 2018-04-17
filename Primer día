@@ -70,3 +70,44 @@ class Ave < Mascota
   end
 end
 
+
+
+
+# Kernel métodos.
+# Los métodos del módulo Kernel son aquellos que están disponibles en todo momento sin la necesidad de señalar la clase a la que pertenece
+# tal es el caso de la instrucción <<puts>>, de hecho se puede llamar al método desde el módulo al que pertenece del siguiente modo:
+
+Kernel.puts "Hola" # Sin embargo, es muy inconveniente hacer esto porque el método es accesible desde cualquier parte está en el scope de toda clase.
+
+
+# Métodos con argumentos
+
+class Perro < Mascotas
+  def Ladrar_mas (i)
+    i.times do
+      puts "¡Woof!"
+    end
+  end
+end
+
+Luna = Perro.new
+Luna.ladrar_mas (3) # Con esto obtenemos 3 veces el mensaje.
+
+  #Un método con varios argumentos se realiza del siguiente modo
+  
+class Perro
+  def Orden (a, b, c)
+    puts a
+    puts b
+    puts c
+  end
+end
+
+Luna.Orden("Sentado", "Quieto", "Ven")
+
+
+
+
+
+
+
