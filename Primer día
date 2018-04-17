@@ -106,6 +106,27 @@ end
 Luna.Orden("Sentado", "Quieto", "Ven")
 
 
+# Métodos de clases, ejemplo clase String
+
+puts "Hola Diego, te la volvieron a hacer y tan tierna que se ve".length # Retorna la cantidad de caracteres en la cadena, cuenta espacios en blanco.
+
+puts "Pon esta vaina en mayúscula".upcase # Retorna "PON ESTA VAINA EN MAYÚSCULA"
+
+"Diego " + "Hernando " + "El Krillin" # Concatenación de cadenas de String
+
+"DIEGO".downcase # Pasa a minúsculas
+"diego".upcase # Pasa a mayúsculas
+"diego".capitalize # "Diego"
+"diego".chop # "Dieg"
+"diego".next # "Diegp"
+"diego".reverse # "ogeid"
+"DiEgO".swapcase # "dIeGo"
+"diego".upcase.reverse # "OGEID"
+"diego".upcase.reverse.next # "OGEIE"
+
+    #Ocurre que las instucciones se pueden concatenar de este modo porque tras la ejecución de cada uno de ellos se retorna el valor que el próximmo método acepta como argumento.
+    
+ 
 
 
 
