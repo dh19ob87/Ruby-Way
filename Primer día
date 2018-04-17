@@ -1,0 +1,72 @@
+# El hola mundo de dos formas diferentes.
+
+print "Hola mundo" #Imprime Hola mundo sin ingresar un enter \n.
+puts "Hola mundo" # Imprime un Hola mundo con un enter añadido de modo que la expresión que retorna la IRB se imprime en otra línea.
+
+# Operaciones básicas directas.
+2+2
+3/2 # Éstas operaciones retornan un valor entero redondeado por lo que es necesario indicar a la IRB que se trabaja con Float del siguiente modo
+3.0/2.0
+3.0/2
+3/2.0 #Cualquiera de las anteriores expresiones retorna un valor decimal con una precisión de 1 decimal.
+
+# En Ruby todo son objetos de modo que un número es una instancia de alguna clase
+# Por ejemplo 2 es un objeto de la clase Integer, 2.0 pertenece a la clase Float, "a" a la clase string, etc.
+# Para conocer a qué clase pertenece un objeto se llama al método class, del siguiente modo
+puts 2.class
+2.class
+"Hola".class
+(2.0).class
+Primera_clase.class # Para el caso de una instancia de alguna clase, o sea, un objeto.
+
+# Creando la primera clase. Ruby maneja un paradigma de programación orientado a objetos
+
+class Persona
+  attr_accessor :nombre, :apellido, :edad, :genero
+end
+
+    # Para crear un objeto de la clase Persona, una instancia se procede del siguiente modo.
+    
+    Humano = Persona.new
+    
+    # Para ingresar información a algún campo se procede así
+    
+    Humano.nombre = "Diego"
+    Humano.apellido = "Hernando"
+    Humano.edad = 30
+    Humano.genero = "Masculino"
+    
+    Humano.class # Practicando lo anterior, retorna <<Persona>> que es la clase de la que proviene el objeto.
+    
+# Herencia entre clases.
+
+class Mascota
+  attr_accessor :nombre, :edad, :color, :genero
+end
+
+class Perro < Mascota
+end
+
+  # De este modo la clase perro hereda de la clase mascota todos los atributos, es decir, nombre, edad, color, genero
+  
+  Canino = Perro.new
+  Canino.nombre = "Luna"
+  Canino.edad = 4
+  Canino.color = "Bicolor café blanco"
+  Canino.genero = "Femenino"
+  
+class Gato < Mascota
+  attr_accesor :raza
+end
+  
+  # Entonces la clase Gato hereda los campos de la clase mascota y adicionalmente añado un campo único de la clase Mascota llamado raza.
+  
+
+# Definir métodos en Ruby
+
+class Ave < Mascota
+  def Piar
+    puts "Pio pio"
+  end
+end
+
