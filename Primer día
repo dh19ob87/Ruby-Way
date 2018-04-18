@@ -126,8 +126,17 @@ puts "Pon esta vaina en mayúscula".upcase # Retorna "PON ESTA VAINA EN MAYÚSCU
 
     #Ocurre que las instucciones se pueden concatenar de este modo porque tras la ejecución de cada uno de ellos se retorna el valor que el próximmo método acepta como argumento.
     
- 
 
+# If, unless y between
+ 
+x = 10
+puts "Tienes el empleo" if (x > 1) # Obtenemos entonces el mensaje "Tienes el empleo" porque x sí es mayor que 1
+ 
+puts "No tienes el empleo" unless (x > 20) # Obtenemos el mensaje "Tienes el empleo" porque x no es mayor que 20 <<Unless>> es el equivalente a decir sí la condición es falsa entonces has esto.
+ 
+x.between?(1, 20) # Retorna <<true>>
+ 
+puts "Sí se encuentra en el valor requerido" if(x.between?(1, 20)) # Entonces obtenemos el mesaje <<Sí se encuentra en el valor requerido>>
 
 
 
