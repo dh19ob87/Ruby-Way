@@ -139,5 +139,21 @@ x.between?(1, 20) # Retorna <<true>>
 puts "Sí se encuentra en el valor requerido" if(x.between?(1, 20)) # Entonces obtenemos el mesaje <<Sí se encuentra en el valor requerido>>
 
 
+# Operadores de comparación
+
+x = 5
+y = -1
+z = 5
+
+x > y # Verdadero
+y < x # Verdadero
+x < y # Falso
+x == z # Verdadero
+x >= y # Verdadero
+x <= z # Verdadero
+x <=> y # Ésta comparación retorna 0 si x es igual a y, 1 si x es mayor que y, y -1 si x es menor que y
+x != y # Verdadero x no es igual a y
+
+
 
 
