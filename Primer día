@@ -154,6 +154,14 @@ x <= z # Verdadero
 x <=> y # Ésta comparación retorna 0 si x es igual a y, 1 si x es mayor que y, y -1 si x es menor que y
 x != y # Verdadero x no es igual a y
 
+puts "Condicional o" if (x == 6 || y < 2)
 
+# Loop
+
+5.times do x+=1 end # Suma 1 al valor de x 5 veces
+
+  # Si el bloque de código implica solo una línea de código se puede expresar del siguiente modo
+
+5.times {puts "Prueba"}
 
 
