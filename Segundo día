@@ -39,4 +39,42 @@ Pi = 3.141592
   # De este modo, al tratar de cambiar el valor de la variable obtenemos una advertencia indicando que el valor de la constante se ha cambiado on the fly
   
 
+# Strings
+
+x = "String literal" # Por supuesto es un literal, el de la variable.
+
+  #Cuando se desea incluir un string de multiples lineas se usa.
   
+x = %q{ Según esto estas metido en líos
+aún falta mucho y esto es puros objetos
+esto se enreda} # De acuerdo a la documentación se puede usar cualquier par de llaves, incluso dos llaves iguales como !! pero en donde la IRB encuentre el par contrario o igual deja de interpretar líneas causando error por el resto del string
+
+y = %q[ Este es otro ejemplo de string multilinea
+de acuerdo a la documentación cualquier par de llaves sirve]
+
+  #Finalmente disponemos del concepto <<here document>> 
+
+x = <<CIERRA_AQUI
+Se trata de un texto, un string representando un texto grande
+en el que podemos escribir tanto hasta que se encuentre con la etiqueta que definimos
+para cerrar el documento. Se inicia con dos símbolos de menor que y se define la
+etiqueta en mayúsculas.
+CIERRA_AQUI
+
+puts "diego "*2 # diego diego
+puts "a" > "b" # false
+puts "a" < "b" # true
+# Ya que los strings se pueden comparar es posible determinar el valor de cada caracter del siguiente modo.
+
+puts "A".ord # 65
+puts "a".ord # 97
+
+# Lo contrario se puede obtener con
+
+puts 65.chr # A
+puts 97.chr # a
+
+# Interpolación de strings (terminología de Ruby)
+
+
+
