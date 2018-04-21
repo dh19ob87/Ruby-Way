@@ -28,3 +28,15 @@ x.step(10, 5){puts (x+1).to_s} # 1 2 3
 10.downto(0){|number| puts number} # 10 9 8 7 6 5 4 3 2 1 0
 0.step(10, 2){|number| puts number} # 0 2 4 6 8 10
 
+
+
+# Nota de operaciones con float, debido a que Ruby considera todo número como entero a no ser que se indique explícitamente que es un decimal
+# en el caso de un valor ingresado se puede solucionar convirtiendo on the fly el valor ingresado x.to_f y el proceso también se puede hacer para enteros x.to_i
+
+#Las constantes en Ruby se definen con la primera letra de la variable en mayúscula.
+
+Pi = 3.141592
+  # De este modo, al tratar de cambiar el valor de la variable obtenemos una advertencia indicando que el valor de la constante se ha cambiado on the fly
+  
+
+  
