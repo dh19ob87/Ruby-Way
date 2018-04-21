@@ -1,0 +1,30 @@
+# Segundo día. Iteradores y bloques
+
+5.times do puts "Segundo día" end # Hacemos uso del método times probablemente del Kernel porque es accesible sin clase. La instrucción 5.times.class => Enumerator
+
+  #Si la instrucción consta de una sola instrucción se puede escribir como
+  
+  5.times {puts "En caso de que solo sea una instrucción"}
+  
+x = 0
+x.upto(5) {puts (x+=1).to_s}
+
+x = 10
+x.downto(0) {puts (x-=1).to_s}
+
+x = 0
+x.step(10, 2){puts (x+=1).to_s} # 1 2 3 4 5 6
+x = 0
+x.step(10, 5){puts (x+1).to_s} # 1 2 3
+
+  #Una manera más limpia de ver el resultado.
+  
+1.upto(5){|number| puts number} # De este modo se declara una variable <<number>> dentro del bloque y se imprime su valor 1 2 3 4 5
+
+  # Es decir, el valor de cada iteración se almacena en |number|, éste es el modo en que Ruby para variables entre bloques.
+
+
+
+10.downto(0){|number| puts number} # 10 9 8 7 6 5 4 3 2 1 0
+0.step(10, 2){|number| puts number} # 0 2 4 6 8 10
+
