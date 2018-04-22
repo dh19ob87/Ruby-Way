@@ -75,6 +75,10 @@ puts 65.chr # A
 puts 97.chr # a
 
 # Interpolación de strings (terminología de Ruby)
+  # Mediante éste método es posible operar sentencias, expresiones o lógica dentro de los Strings.
 
+a = 10
+b = 20
+puts "#{a} + #{b} = #{a+b}" # 10 + 20 = 30
 
 
