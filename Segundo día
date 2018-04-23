@@ -81,4 +81,98 @@ a = 10
 b = 20
 puts "#{a} + #{b} = #{a+b}" # 10 + 20 = 30
 
+nombre =  "Diego"
+x = 5
+y = 10
+
+puts "Cuando mi mamá se enoja me llama hasta #{y} veces y puede repetir mi nombre #{x} veces en menos de #{x-4} segundo. Entonces valgo verga así: #{nombre*5}"
+
+  #También se puede interpolar en asignación de variables.
+  
+mensaje = "Amigo serás #{"Verga " * 5}"
+
+# Expresiones regulares en String
+
+puts "Me gusta Tatiana.".sub('Tatiana', 'Alejadra') # De modo que tenemos una sustitución.
+
+  #Para sustituciones en grupo se usa <<gsub>>
+  
+puts "Otrora Diego, Tatiana amaba. Tatiana se puso complicada y puso pesada la vaina. Tatiana me dejó y consiguió novio como si nada, ahora vuelve a joder con el cuento de que me ama, o sea, Tatiana que madres.".gsub('Tatiana','Alejandra')
+  
+  # Reemplazando texto en una línea Expresiones Regulares
+
+cadena = "Danna"
+  
+cadena.sub(/^../, 'Alejandra') # De ésta instrucción tenemos dos cosas nuevas el <<anchor /^./>> dentro del que se incluye mediante puntos la cantidad de caracteres que se desean reemplazar con el string ingresado.
+
+cadena.sub(/^.../, 'Diego') # Diegona
+
+cadena.sub(/^./, 'L') # Lanna
+
+cadena.sub(/..$/, 'Diego') # DanDiego | como se observa en el resultado en este caso se actúa desde el final de la línea.
+
+cadena.sub(/....$/, 'Luna') # DLuna
+
+cadena.sub(/....$/, 'L') # DL
+
+# Los resultados varian si se trata no de un literal sino de un texto o una cadena String de múltiples líneas,
+
+mensaje =  <<HAGAME_EL_FAVOR
+Ruby es un lenguaje de programación de muy alto nivel
+no suele ser de mi agrado tener algo tan sencillo de manejar
+porque me preocupa lo que se encuentra detrás de todo éste sistema tan elaborado
+me da curiosidad.
+HAGAME_EL_FAVOR #Como resultado obtenemos una cadena con <<comandos>> como <<\n>> y los <<anchor>> vistos sólo actúan sobre la primera linea.
+
+mensaje.sub(/^../, "Diego")
+
+=begin
+Diegoby es un lenguaje de programación de muy alto nivel
+no suele ser de mi agrado tener algo tan sencillo de manejar
+porque me preocupa lo que se encuentra detrás de todo éste sistema tan elaborado
+me da curiosidad.
+=end
+
+mensaje.sub(/...$/, 'Diego')
+
+=begin
+Ruby es un lenguaje de programación de muy alto nivel
+no suele ser de mi agrado tener algo tan sencillo de manejar
+porque me preocupa lo que se encuentra detrás de todo éste sistema tan elaborado
+me da curiosidDiego
+=end
+
+  #Para que la expresión regular funcione correctamente sobre todo el String es necesario usar el <<anchor>> /\A/ para que se realice la operación sobre el inicio de toda la cadena y /\z/ para que se realice la operación sobre el final de toda la cadena.
+  
+mensaje.sub(/\z/, 'Diego')
+
+=begin
+Ruby es un lenguaje de programación de muy alto nivel
+no suele ser de mi agrado tener algo tan sencillo de manejar
+porque me preocupa lo que se encuentra detrás de todo éste sistema tan elaborado
+me da curiosidad.
+Diego
+=end
+
+# Iterar sobre expresiones regulares
+
+mensaje = "Este es un mensaje de prueba"
+mensaje.scan(/./) # E,s,t,e, ,e,s, ,u,n, ,m,e,n,s,a,j,e, ,d,e, ,p,r,u,e,b,a
+"Este es un mensaje de prueba".scan(/..../) {|letras| puts letras} # Este, es ,un m,ensa,je d,e pr,ueba
+mensaje.scan(/..../)
+
+# Extraer lo números de un String o las letras de un string
+
+mensaje = "Aquí hay un total de 6 números, está el 5 o el 9 o el 10 y el 15 -* 35"
+
+enorme = %q{ Esta es una cadena larga con 3 filas
+y muchos números entre estos 12056
+para probar el funcionamiento de scan en una cadena y no un literal.}
+
+mensaje.scan(/./) # Retorna cada caracter del literal.
+enorme.scan(/./) # Retorna cada caracter del String.
+
+enorme.scan(/\d/) # Retorna todos los números en el String digito por digito
+enorme.scan(/\d+/) # Retorna los números que hay en la cadena como cifras tal cual como se encuentran en la cadena.
+
 
