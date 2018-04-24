@@ -156,12 +156,32 @@ x != y # Verdadero x no es igual a y
 
 puts "Condicional o" if (x == 6 || y < 2)
 
-# Loop
+# Loop e iteradores
 
 5.times do x+=1 end # Suma 1 al valor de x 5 veces
 
   # Si el bloque de código implica solo una línea de código se puede expresar del siguiente modo
 
 5.times {puts "Prueba"}
+
+
+# Iteradores
+
+5.times{puts "Repetir"}
+1.upto(10){|number| puts number}
+1.upto(20) do |number|
+  puts "number"
+end
+
+10.downto(0){|number| puts number}
+10.downto(3) do |number|
+  puts number
+end
+
+0.step(0,50){|number| puts number}
+0.step(0, 50) do |number|
+  puts number
+end
+
 
 
