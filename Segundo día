@@ -174,5 +174,60 @@ enorme.scan(/./) # Retorna cada caracter del String.
 
 enorme.scan(/\d/) # Retorna todos los números en el String digito por digito
 enorme.scan(/\d+/) # Retorna los números que hay en la cadena como cifras tal cual como se encuentran en la cadena.
+"Esta es una cadena larga con 3 filas y muchos números entre estos 12056 para probar el funcionamiento de scan en una cadena y no un literal.".scan(/\d+/) do |resultado| puts resultado end
+
+"En este largo literal se encuentra un solo númer0 que podría, dependiendo del editor de texto, confundirse con una o".scan(/0/) # Con ésto se puede observar que <<scan>> permite buscar en el texto caracteres o palabras.
+"En este largo literal se encuentra un solo númer0 que podría, dependiendo del editor de texto, confundirse con una o".scan(/literal/)
+
+
+
+
+  #Matching operador =~ y <<match>> sirve para comparar cadenas de caracteres y a su vez preguntar si existe algún caracter dentro de las cadenas
+  
+puts "Aquí no hay números" if ("Comparamos con números 1 2 3 4" =~ /[0-9]/) 
+
+puts "Me quiero tirar a Alejandra" unless ("123" =~ /[0-9]/)
+
+"Coincidencia".match(/[a-f]/)
+  # Con match se puede hacer esto.
+  
+x = "Esto es un mensaje regular".match(/(\w+) (\w+)/)
+
+
+
+#Arrays
+
+array = [1,2,3,4,5,6]
+array [0] # 1
+array [0] -= 1
+array [3] = 400
+  # Array vacios son válidos en Ruby
+vacio = []
+
+  # Para agregar información a la última posición usamos <<
+array << 7 #[1 2 3 4 5 6 7]
+
+texto_array = []
+texto_array << "Primero" # Se obtiene el mismo resultado con texto_array.push("Primero") texto_array.push("Segundo")
+texto_array << "Segundo"
+
+  # Para remover se usa pop y retira el último item ingresado en el array último en entrar primero en salir.
+  
+texto_array.pop
+texto_array.length
+puts texto_array
+
+  # Se pueden juntar los elementos del array.
+  
+array_numero = [1, 2, 3, 4, 5]
+array_numero.join
+
+"Esto es una prueba".scan(/\w/).join('-') # Escanea la cadena en busca de caracteres y digitos para unirlos con guiones o comas.
+
+"La penumbra no es nada. a tú lado porque en ti puedo imaginar. el mundo que alberga tu sonrisa.".split(/\./).inspect
+"La penumbra, esa en la que se ocultan las tristezas contigo no se compara, el mismo color les abraza pero contigo la imaginación nace".split(/\./).inspect
+"Un corto pero lleno de espacios y concentrado texto".split(/\s/).inspect
+
+p "Un corto pero lleno de espacios y concentrado texto".split(/\s/) # Equivalente a <<inspect>>
 
 
