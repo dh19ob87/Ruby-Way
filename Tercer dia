@@ -47,6 +47,55 @@ z - y # 1 , 2 , 3
 vacio = []
 puts "Vacio" if vacio.empty? # Vacio
 
+# Comprobar si hay un elemento en el array <<includes>>
+
+array_text.include?("palabras") # True
+array.include?(10) # True
+
+# Accediendo al primer y último elemento de un array
+
+array_texto.first
+array_texto.last
+
+  # Tambien pueden recibir el número de elementos a retornar
+  
+array.first(4) # 0 1 2 3
+array.first(4).join('-') # 0-1-2-3
+array.last(3) # 18 19 20
+array.last(3).join("*") # 18*19*20
+
+array.reverse # Invierte el orden del array
 
 
+# HASHES
 
+#               Clave         Valor       Clave         Valor
+#                 ^             ^           ^             ^
+primer_hash = {'gato' => 'animal felino', 'dog' => 'animal canino'}
+primer_hash.size # 2
+primer_hash['gato']
+primer_hash['dog'] = 'Luna' # Asignación de valor a una key
+
+  # Para iterar sobre Hashes
+  
+primer_hash.each{|clave, literal| puts "#{clave} vale #{valor}"} # gato vale animal felino dog vale animal canino
+
+  # Para consultar solo las keys o claves del hash se utiliza
+  
+puts primer_hash.keys # Retorna las claves en un array
+
+primer_hash.delete('gato') # Elimina el hash element con clave gato
+
+  # Para agregar un elemento hash se procede como
+primer_hash['ave'] = 'este vuela'
+
+primer_hash.size # 3
+
+primer_hash.delete_if{|clave, valor| valor == "este vuela"}
+primer_hash.size # 2
+
+  # Hashes embebidos, resulta que en RUby absolutamente todo es un objeto, entonces un hash puede contener dentro de sí cualquier tipo de objeto
+  
+people = {'fred' => {'nombre' => 'Diego Otalora', 'edad' => 30, 'sexo' => 'Masculino', 'bandas favoritas' => ['Motorhead', 'Judas priest', 'Iron Maiden'] }, 'Wilmar' => {'nombre' => 'Otalora', 'edad' => 24, 'sexo' => 'masculino'}}
+people.keys # ['fred','Wilmar']
+people['fred']['bandas favoritas'] # Retorna el array del hash <<fred>> embebido en el hash <<people>>
