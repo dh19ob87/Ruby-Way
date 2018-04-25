@@ -1,0 +1,8 @@
+# Condicionales, no tienen una estructura tan fija como otros lenguajes por ejemplo el if puede ir en una sola línea combinado con otra instrucción
+
+edad = 25
+
+puts "Usted debe pagar salud y pensión" if(x >= 25) # True imprime el mensaje
+
+puts "No debe pagar impuestos" unless (x > 25) # <<x>> no es mayor que 25 y se imprime el mensaje. (Imprime esto a no ser que esto sea cierto)
+
