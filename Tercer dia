@@ -1,0 +1,52 @@
+# Iterar sobre arrays
+
+array = []
+0.upto(20) do |numero|
+  array << numero
+end
+
+0.upto(20) {|cifra| array << cifra}
+
+array.each # Listado del contenido en el array
+
+array * 2 # Genera un array de 40 posiciones con el contenido original duplicado pero no se guarda en la variable
+
+(array.each)*2 
+
+array_texto = []
+"Ingresando palabras al un array de texto o string separando palabras por espacios".split(/\s+/).each do |palabra|
+  array_texto << palabra
+end
+
+  # ¡Que es exactamente la misma miércoles que! Solo quería probar vueltas raras.
+  
+  array_texto = "Ingresando palabras al un array de texto o string separando palabras por espacios".split(/\s+/)
+
+# Como se puede observar se han creado dos arrays uno con un iterador al que ingresamos números del 0 al 20 y un array al que
+# agregamos elementos de la frase, palabras que retorna el método <<split>> y luego iterando sobre cada elemento del array que retorna
+# la función con <<split>> con <<each>> e ingresarlos uno por uno al array.
+
+# Es posible operar directamente sobre los elementos del array con <<collect>> o con <<map>>
+
+array.collect{|elemento| elemento - 10} # -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 | Sin embargo el array original sigue igual, hemos operado sobre el resultado de collect que son los elementos del array de ningún modo una referencia al contenido del array
+array.map{|elemento| elemento -10} # Mismo resultado
+
+# Los arrays se pueden concatenar del siguiente modo
+
+x = [1,2,3]
+y = ["a","b","c"]
+z = x+y #[1,2,3,"a","b","c"]
+
+# Los arrays se pueden sustraer
+
+z - x # "a","b","c"
+z - y # 1 , 2 , 3
+
+# Determinar si un array está vacio <<.empty>>
+
+vacio = []
+puts "Vacio" if vacio.empty? # Vacio
+
+
+
+
