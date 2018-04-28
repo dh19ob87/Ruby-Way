@@ -6,3 +6,59 @@ puts "Usted debe pagar salud y pensión" if(x >= 25) # True imprime el mensaje
 
 puts "No debe pagar impuestos" unless (x > 25) # <<x>> no es mayor que 25 y se imprime el mensaje. (Imprime esto a no ser que esto sea cierto)
 
+
+# La verdad llevo dos días en que no he hecho nada, éste debía ser el día cuarto pero es como el sexto ... XD XD
+
+if(edad >= 18)
+  puts "Usted es mayor de edad puede ingresar al sitio"
+else
+  puts "Lo lamentamos, usted no debe ingresar a éste sitio por ser menor de edad"
+end
+
+if(edad <=15)
+  puts "Usted está en la pubertad"
+else if(edad >15 && edad <=18)
+    puts "Usted es un adolescente"
+    else
+      puts"Usted es un adulto"
+    end
+end
+
+# Al igual que en Java existe en Ruby el operador ternario, pero para el caso de éste último es más conciso e intuitivo.
+
+respuesta = edad < 25 ? "No paga salud y pensión como independiente" : "Paga salud como independiente"
+#               ^               ^                                                  ^
+# Es decir -> Condición ? Resultado para verdadero                         Resultado para falso
+
+edad >= 25 ? "mayor de edad" : "Menor de edad"
+
+# elsif 
+
+fruta = "naranja"
+color = " "
+if(fruta == "naranja")
+  color = "Naranja"
+elsif (fruta == "coco")
+  color =  "cafe"
+elsif(fruta == "banana")
+  color = "amarillo"
+else
+  color = "Desconocido"
+end
+
+# case
+
+fruta = "naranja"
+case fruta
+  when "naranja"
+    color = "naranja"
+  when "coco"
+    color = "café"
+  when "banana"
+    color = "amarillo"
+  else
+    colo = "Desconocido"
+  end
+
+
+
