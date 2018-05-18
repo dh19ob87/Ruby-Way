@@ -17,6 +17,9 @@ x.step(10, 2){puts (x+=1).to_s} # 1 2 3 4 5 6
 x = 0
 x.step(10, 5){puts (x+1).to_s} # 1 2 3
 
+x.step(10, 2) {|salida| puts salida} # 0 2 4 6 8 10
+x.step(10, 5) {|salida| puts salida} # 0 5 10
+
   #Una manera más limpia de ver el resultado.
   
 1.upto(5){|number| puts number} # De este modo se declara una variable <<number>> dentro del bloque y se imprime su valor 1 2 3 4 5
