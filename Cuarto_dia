@@ -93,7 +93,26 @@ color = case fruta
   
   variable.pop until variable.empty?
   
+  ######### Códe blocks
   
+  def each_vowel (&code_block)
+    %w{a e i o u}.each {|vowel| code_block.call(vowel)}
+  end 
   
+  each_vowel {|vowel| puts vowel} # a e i o u
+  
+        ### <<each_vowel>> es una función que recibe un código de bloque como se observa en la línea 102.
+        ### para indicar que se recibe un codeblock se antepone un & al nombre de la variable, línea 98. 
+        ### En la línea 99 se crea un arreglo de string, se itera sobre el y se adjunta un codeblock en el que se retorna la variable |vowel| junto con el método code_block.call(vowell)
+  
+def each_vowel
+  %w{a e i o u}.each {|vowel| yield vowel}
+end
+         ### Es equivalente al anterior codeblock salvo que no se usa & o la función call si no que se se utiliza <<yield>> que simplifica y hace menos evidente para el lector de código que se trata de un codeblock.
+         
+# Es posible pasar máximo 1 codeblock a un método. Pueden recibir cuantos argumentos se quiera o lo que es lo mismo la función puede recibir sólo 1 codeblock y puede tener muchos parámetros.
 
 
+        
+        
+        
