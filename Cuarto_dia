@@ -57,8 +57,43 @@ case fruta
   when "banana"
     color = "amarillo"
   else
-    colo = "Desconocido"
+    color = "Desconocido"
   end
 
+# También se puede agregar directamente como literal
+
+fruta = "banano"
+color = case fruta
+  when "coco"
+    "blanco"
+  when "sandia"
+    "verde"
+  when "banano"
+    "amarillo"
+  else
+    "desconocido"
+  end
+  
+  # WHILE
+  
+  x = 0
+  while x < 100 # Mientras que x sea menor que 100
+    puts x
+    x+=10
+  end # 0 10 20 30 40 50 60 70 80 90
+  
+  until x == 100 # Ejecutar esto hasta que x == 100
+    puts x
+    x+=10
+  end # 0 10 20 30 40 50 60 70 80 90
+  
+  variable = []
+  
+  variable << until x == 50 x+=10; Se crea un Array [10 20 30 40 50 60]
+  
+  variable.pop until variable.empty?
+  
+  
+  
 
 
