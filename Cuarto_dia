@@ -112,7 +112,78 @@ end
          
 # Es posible pasar máximo 1 codeblock a un método. Pueden recibir cuantos argumentos se quiera o lo que es lo mismo la función puede recibir sólo 1 codeblock y puede tener muchos parámetros.
 
+imprimir_doble = lambda {|x| puts x*x} # En este caso se crea un procedur que recibe un número. Esto es asignar un codeblock a una variable.
 
-        
-        
-        
+    ### DATES Ruby tiene una clase Time que permite manejar horas y fechas.
+    
+Times.now
+
+Times.now + 20 # Le sumamos segundos al resultado retornado por la instancia de Times
+
+    # Creando fechas
+    
+year = 1987
+month = "sep"
+day = 22
+hour = 11
+min = 30
+sec = 45
+msec = 42
+
+Time.local(year, month, day, hour, min, sec, msec)
+Time.gm(year, month, day, hour, min, sec, msec) # Formato GMT
+Time.utc(year, month, day, hour, min, sec, msec) # Formato UTC
+
+Time.local(year, month, day, hour, min, sec, msec).to_i # Retorna la cantidad de segundos trascurridos desde la época de UNIX
+segundos = Time.local(year, month, day, hour, min, sec, msec).to_i
+t = Time.at(segundos) # Con esta instrucción calculamos la fecha a partir de la cantidad de segundos trascurridos desde la época de UNIX
+puts t.year t.month t.day t.min t.sec t.msec
+#No se pueden modificar estas fechas directamente en el objeto de Time es necesario sumar o restar segundos
+
+# 
+
+granos_arroz = 1
+64.times do |celda|
+  puts "En la celda #{celda + 1} deben poner #{granos_arroz} granos de arroz"
+  granos_arroz *= 2
+end
+
+granos_arroz = 1
+1.upto(64){|celda| 
+  puts "En la celda #{celda}" ponen #{granos_arroz}
+  granos_arroz *= 2
+}
+
+granos_arroz = 1
+64.downto(1) do |posicion|
+  puts "#{posicion} arroz #{granos_arroz}"
+  granos_arroz *= 2
+end
+
+granos_arroz = 1
+1.step(64,1){|celda|
+puts "#{celda} granos #{granos_arroz}"
+granos_arroz *= 2
+}
+
+granos_arroz = 1
+contador = 1
+while contador <= 64
+  puts "#{contador} granos #{granos_arroz}"
+  granos_arroz *= 2
+  contador +=1
+end
+
+granos_arroz = 1
+contador = 1
+until contador > 64
+  puts "#{contador} granos #{granos_arroz}"
+  granos_arroz *= 2
+  contador += 1
+end  
+
+
+
+
+
+
