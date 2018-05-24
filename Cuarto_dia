@@ -182,6 +182,26 @@ until contador > 64
   contador += 1
 end  
 
+####### RANGOS
+
+letras = ('A' ..  'Z') # Genera un rango "A" .. "Z" para almacenarlo en un array la clase Range ofrece el método to_a
+letras = ('A' .. 'Z').to_a # ['A', 'B', 'C', 'D', 'E' ... 'Z']
+numeros = (1 .. 100).to_a # [1, 2, 3, ... , 100]
+numeros = (1 .. 100).to_a.each {|number| puts number} # Creamos un vector de 100 elementos lo almacenamos en un array e iteramos sobre él para mediante un codeblock capturar los valores e imprimirlos con puts
+('A' .. 'Z').each {|letter| print letter} # Class Range tiene su propio método each
+('A' .. 'Z').include?('F') # Permite saber si en el rango hay un elemento de interes
+numeros[0 .. 20] # Se usa un rango en el índice del array para obtener los primeros 20 elementos
+numeros[20] = ('A' .. 'J') # Los rangos se pueden almacenar en un array
+numeros[20].each {|rango| puts rango}
+numeros [21 .. 26] = ['a', 'e', 'i', 'o', 'u']
+numeros.each.inspect
+
+
+
+
+
+
+
 
 
 
