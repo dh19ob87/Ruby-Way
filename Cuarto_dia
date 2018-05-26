@@ -196,11 +196,23 @@ numeros[20].each {|rango| puts rango}
 numeros [21 .. 26] = ['a', 'e', 'i', 'o', 'u']
 numeros.each.inspect
 
+#Símbolos, se definen con :nombre y no son objetos son referencias sencillas de manejar para Ruby, no almacenan ningún valor, literal u objeto-instancia solamente son un nombre consistente en el código por ejemplo :Caballo es un símbolo
+# En un lenguaje más técnico se trata de una referencia abstracta. "Caballo" crea un objeto de la clase String, se puede verificar con "Caballo".class, mientras que :Caballo pertenece a la clase Symbol, no almacena valor y se puede comparar como cualquier otro objeto. Lo más cercano en Java son los enumerables.
 
+estado = :pausa
+puts "El video juego está en pausa" if (estado == :pausa)
+puts "El video juego inicia" until (estado == :start)
 
+# Resulta particularmente útil cuando se construyen Hashes para distinguir el key con entera claridad y uso efectivo de memoria.
 
+otro_hash = {:key1 => "Maria", :key2 => "Juana", :key3 => 6}
 
+# Conversiones entre clases 
 
+puts "12".to_i + "30.5".to_f
+puts 20.to_s + 18.to_s
+puts ":naranja".to_sym
+puts :naranje.to_s
 
 
 
