@@ -1,0 +1,15 @@
+File.open("CapI.txt").each {|lineas| puts lineas} # Abre el archivo CapI.txt e imprime las líneas del texto.
+
+#Contando líneas.
+cuenta_linea = 0
+File.open("CapI.txt").each do |lineas|
+    puts lineas
+    cuenta_linea += 1
+end
+
+cuenta_linea = 0
+File.open("C:/Users/Usuario TI/Documents/RUBY/CapI.txt").each {|linea| cuenta_linea += 1}
+
+puts cuenta_linea # 34 líneas de texto
+
+
